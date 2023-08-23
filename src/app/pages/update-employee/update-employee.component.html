@@ -1,0 +1,51 @@
+
+<div class="bootstrap-wrapper">
+    <div class="container">
+      <div class="row" style="margin-top: 20px;">
+        <div class="col-md-6 offset-md-3">
+            <div class="container text-center">
+                <img src="../../../assets/logo1.png" alt=""/>
+            </div>
+            <h1 class="text-center">Update Employee</h1>
+          
+            <form >
+               
+                <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Employee ID</mat-label>
+                    <input  [(ngModel)]="employee.id" name="id" matInput placeholder="Enter here">
+                  </mat-form-field>
+
+                  <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>First Name</mat-label>
+                    <input  [(ngModel)]="employee.firstName" name="firstName" matInput placeholder="Enter here">
+                  </mat-form-field>
+
+                  <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Last Name</mat-label>
+                    <input [(ngModel)]="employee.lastName" name="lastName" matInput placeholder="Enter here">
+                  </mat-form-field>
+                  <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Profile</mat-label>
+                    <input [(ngModel)]="employee.profile" name="profile" matInput placeholder="Enter here">
+                  </mat-form-field>
+                  <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Email Address</mat-label>
+                    <input isValidEmail [(ngModel)]="employee.email" name="email" matInput placeholder="Enter here">
+                  </mat-form-field>
+
+                  <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Phone Number</mat-label>
+                    <input [(ngModel)]="employee.phone" name="phone" matInput placeholder="Enter here">
+                  </mat-form-field>
+
+                  <div class="container text-center">
+                    <button (click)="UpdateRegistrationSumbit()" mat-raised-button color="primary">Register</button>
+                    <button (click)="clearPage()" style="margin-left:20px;" mat-raised-button color="accent">Clear</button>
+                    <button [routerLink]="['/home']" style="margin-left:20px;" mat-raised-button color="accent">Back TO Home</button>
+                
+                  </div>
+            </form>
+        </div>
+      </div>
+    </div>
+</div>
